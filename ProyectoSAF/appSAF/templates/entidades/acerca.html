@@ -1,0 +1,25 @@
+{% extends "entidades/index.html" %}
+{% load static %}
+
+{% block titular %}
+<img src="{% static '/assets/Flota.jpeg' %}"  width="500" height="100" >
+{% endblock titular %}
+
+{% block titulo %}
+<h1 class="mb-5">Acerca de mi...</h1>
+{% endblock titulo %}
+
+{% block intermedio %}
+{% endblock intermedio %}
+
+{% block contenido %}
+<h2 class="mb-5">Esta página habla de mi, la experiencia y las metas a las que apuntamos</h2>
+<br>
+<h2 class="mb-5">Se basa en el curso de Python</h2>
+<hr>
+<h2 class="mb-5">T.A.F - Es una marca registrada desde ahora y la idea está patentada por mi. </h2>
+
+<p class="text-muted small mb-4 mb-lg-0">&copy; Claudio Rodriguez 2024. All Rights Reserved.</p>
+
+{% endblock contenido %}
+    

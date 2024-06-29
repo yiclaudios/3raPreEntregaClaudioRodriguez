@@ -1,0 +1,51 @@
+{% extends "entidades/index.html" %}
+
+{% load static %}
+
+{% block titular %}
+<img src="{% static '/assets/Flota.jpeg' %}"  width="500" height="100" >
+{% endblock titular %}
+
+{% block titulo %}
+<h1 class="mb-5">Vehiculos</h1>
+<p>Registro de matrículas de la flotas de vehículos</p>
+{% endblock titulo %}
+
+{% block intermedio %}
+<div class="list-group list-group-flush">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th><u><a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'buscarVehiculos' %}">Buscar Vehiculo</a></u></th>
+                <th><u><a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'vehiculoForm' %}">Formulario Ingreso de Vehiculo</a></u></th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<hr>
+{% endblock intermedio %}
+
+{% block contenido %}   
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Matricula</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for v in vehiculos  %}
+        <tr>
+            <td>{{ v.id }}</td>
+            <td>{{ v.marca }}</td>
+            <td>{{ v.modelo }}</td>
+            <td>{{ v.matricula }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
+    
+    
